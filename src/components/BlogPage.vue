@@ -1,33 +1,35 @@
 <script>
 export default {
-  data: () => {
-    works: [
-      {
-        Id: "0",
-        Image: "../assets/cawang-01.jpg",
-        Tag: "#Logo",
-      },
-      {
-        Id: "1",
-        Image: "Vue.jpg",
-        Tag: "#Illustration",
-      },
-      {
-        Id: "2",
-        Image: "Angular.jpg",
-        Tag: "#Photoshop",
-      },
-      {
-        Id: "3",
-        Image: "Java.jpg",
-        Tag: "Tim Buchikka",
-      },
-      {
-        Id: "4",
-        Image: "web Dev.jpg",
-        Tag: "Colt Stele",
-      },
-    ];
+  data() {
+    return {
+      works: [
+        {
+          Id: "0",
+          Image: "../assets/cawang-01.jpg",
+          Tag: "#Logo",
+        },
+        {
+          Id: "1",
+          Image: "Vue.jpg",
+          Tag: "#Illustration",
+        },
+        {
+          Id: "2",
+          Image: "Angular.jpg",
+          Tag: "#Photoshop",
+        },
+        {
+          Id: "3",
+          Image: "Java.jpg",
+          Tag: "Tim Buchikka",
+        },
+        {
+          Id: "4",
+          Image: "web Dev.jpg",
+          Tag: "Colt Stele",
+        },
+      ],
+    };
   },
 
   methods: {
