@@ -1,33 +1,33 @@
 <script>
 export default {
-  data: {
+  data: () => {
     Works: [
       {
-        Id: "1",
+        Id: "0",
         Image: "../assets/cawang-01.jpg",
         Tag: "#Logo",
       },
       {
-        Id: "2",
+        Id: "1",
         Image: "Vue.jpg",
         Tag: "#Illustration",
       },
       {
-        Id: "3",
+        Id: "2",
         Image: "Angular.jpg",
         Tag: "#Photoshop",
       },
       {
-        Id: "4",
+        Id: "3",
         Image: "Java.jpg",
         Tag: "Tim Buchikka",
       },
       {
-        Id: "5",
+        Id: "4",
         Image: "web Dev.jpg",
         Tag: "Colt Stele",
       },
-    ],
+    ];
   },
 
   methods: {
@@ -56,13 +56,13 @@ export default {
         >
           Made for you
         </h1>
-        <section
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4"
-          v-for="(Work, index) in Works"
-          :key="index"
-        >
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <!-- CARD 1 -->
-          <div class="bg-gray-900 shadow-lg rounded p-3">
+          <div
+            class="bg-gray-900 shadow-lg rounded p-3"
+            v-for="(Work, index) in Works"
+            :key="index"
+          >
             <div class="group relative">
               <img
                 class="w-full md:w-72 block rounded"
