@@ -178,6 +178,7 @@ export default {
   font-weight: bold;
   /* padding: 7px; */
   border-bottom-width: 5px;
+  border-color: #556ce5;
   padding-bottom: 5px;
 }
 </style>

@@ -15,7 +15,7 @@ export default defineComponent({
         class="h-64 rounded-md overflow-hidden bg-cover bg-center mx-auto"
         style="
           background-image: url('https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-          height: 500px;
+          height: 450px;
         "
       >
         <div

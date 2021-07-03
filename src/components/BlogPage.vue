@@ -1,3 +1,42 @@
+<script>
+export default {
+  data: {
+    Works: [
+      {
+        Id: "1",
+        Image: "../assets/cawang-01.jpg",
+        Tag: "#Logo",
+      },
+      {
+        Id: "2",
+        Image: "Vue.jpg",
+        Tag: "#Illustration",
+      },
+      {
+        Id: "3",
+        Image: "Angular.jpg",
+        Tag: "#Photoshop",
+      },
+      {
+        Id: "4",
+        Image: "Java.jpg",
+        Tag: "Tim Buchikka",
+      },
+      {
+        Id: "5",
+        Image: "web Dev.jpg",
+        Tag: "Colt Stele",
+      },
+    ],
+  },
+
+  methods: {
+    myFunction: function () {
+      window.open("https://www.google.com", "_blank");
+    },
+  },
+};
+</script>
 <template>
   <div>
     <main
@@ -17,13 +56,17 @@
         >
           Made for you
         </h1>
-        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <section
+          class="grid grid-cols-1 sm:grid-cols-3 gap-4"
+          v-for="(Work, index) in Works"
+          :key="index"
+        >
           <!-- CARD 1 -->
           <div class="bg-gray-900 shadow-lg rounded p-3">
             <div class="group relative">
               <img
                 class="w-full md:w-72 block rounded"
-                src="../assets/cawang-01.jpg"
+                src="{{Work.Image}}"
                 alt=""
               />
               <div
@@ -67,8 +110,8 @@
                     />
                   </svg>
                 </button>
-
                 <button
+                  @click="myFunction()"
                   class="
                     hover:scale-110
                     text-white
@@ -86,8 +129,8 @@
                     viewBox="0 0 24 24"
                   >
                     <path
-                      fill="#ffffff"
-                      d="M9.17,10.17a1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42L5.41,4H7A1,1,0,0,0,7,2H3a1,1,0,0,0-.38.08,1,1,0,0,0-.54.54A1,1,0,0,0,2,3V7A1,1,0,0,0,4,7V5.41L8.46,9.88A1,1,0,0,0,9.17,10.17Zm6.37-1.71a1,1,0,0,0-1.42,0L8.46,14.12a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l5.66-5.66A1,1,0,0,0,15.54,8.46ZM21,16a1,1,0,0,0-1,1v1.59l-4.46-4.47a1,1,0,1,0-1.42,1.42L18.59,20H17a1,1,0,0,0,0,2h4a1,1,0,0,0,.38-.08,1,1,0,0,0,.54-.54A1,1,0,0,0,22,21V17A1,1,0,0,0,21,16Z"
+                      fill="#FFFFFF"
+                      d="M15,10H12V7a1,1,0,0,0-2,0v3H7a1,1,0,0,0,0,2h3v3a1,1,0,0,0,2,0V12h3a1,1,0,0,0,0-2Zm6.71,10.29L18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"
                     />
                   </svg>
                 </button>
@@ -124,222 +167,6 @@
             </div>
           </div>
           <!-- END OF CARD 1 -->
-
-          <!-- CARD 2 -->
-          <div class="bg-gray-900 shadow-lg rounded p-3">
-            <div class="group relative">
-              <img
-                class="w-full md:w-72 block rounded"
-                src="https://upload.wikimedia.org/wikipedia/en/c/ca/Tycho_-_Awake.png"
-                alt=""
-              />
-              <div
-                class="
-                  absolute
-                  bg-black
-                  rounded
-                  bg-opacity-0
-                  group-hover:bg-opacity-60
-                  w-full
-                  h-full
-                  top-0
-                  flex
-                  items-center
-                  group-hover:opacity-100
-                  transition
-                  justify-evenly
-                "
-              >
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-heart"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
-                    />
-                  </svg>
-                </button>
-
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    fill="currentColor"
-                    class="bi bi-play-circle-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
-                    />
-                  </svg>
-                </button>
-
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-three-dots"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-white text-lg">Awake</h3>
-              <p class="text-gray-400">Tycho</p>
-            </div>
-          </div>
-          <!-- END OF CARD 2 -->
-
-          <!-- CARD 3 -->
-          <div class="bg-gray-900 shadow-lg rounded p-3">
-            <div class="group relative">
-              <img
-                class="w-full md:w-72 block rounded"
-                src="https://upload.wikimedia.org/wikipedia/en/1/11/Dive_tycho_album.jpg"
-                alt=""
-              />
-              <div
-                class="
-                  absolute
-                  bg-black
-                  rounded
-                  bg-opacity-0
-                  group-hover:bg-opacity-60
-                  w-full
-                  h-full
-                  top-0
-                  flex
-                  items-center
-                  group-hover:opacity-100
-                  transition
-                  justify-evenly
-                "
-              >
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-heart"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
-                    />
-                  </svg>
-                </button>
-
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    fill="currentColor"
-                    class="bi bi-play-circle-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
-                    />
-                  </svg>
-                </button>
-
-                <button
-                  class="
-                    hover:scale-110
-                    text-white
-                    opacity-0
-                    transform
-                    translate-y-3
-                    group-hover:translate-y-0 group-hover:opacity-100
-                    transition
-                  "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-three-dots"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-white text-lg">Dive</h3>
-              <p class="text-gray-400">Tycho</p>
-            </div>
-          </div>
-          <!-- END OF CARD 3 -->
         </section>
       </div>
     </main>

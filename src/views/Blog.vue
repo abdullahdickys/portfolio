@@ -9,5 +9,15 @@ import BlogPage from "@/components/BlogPage.vue";
 
 export default defineComponent({
   components: { BlogPage },
+  // data: {
+  //   items: [
+  //     { lang: "Php" },
+  //     { lang: "Laravel" },
+  //     { lang: "Java" },
+  //     { lang: "c" },
+  //     { lang: "c#" },
+  //     { lang: "python" },
+  //   ],
+  // },
 });
 </script>
