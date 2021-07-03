@@ -1,7 +1,7 @@
 <script>
 export default {
   data: () => {
-    Works: [
+    works: [
       {
         Id: "0",
         Image: "../assets/cawang-01.jpg",
@@ -60,13 +60,13 @@ export default {
           <!-- CARD 1 -->
           <div
             class="bg-gray-900 shadow-lg rounded p-3"
-            v-for="(Work, index) in Works"
-            :key="index"
+            v-for="work in works"
+            :key="work.Id"
           >
             <div class="group relative">
               <img
                 class="w-full md:w-72 block rounded"
-                src="{{Work.Image}}"
+                src="{{work.Image}}"
                 alt=""
               />
               <div
