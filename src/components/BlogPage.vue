@@ -5,28 +5,33 @@ export default {
       works: [
         {
           id: "0",
-          img: "require('../assets/cawang-01.jpg')",
+          img: "require(`@/assets/cawang-01.jpg`)",
           tag: "#Logo",
+          link: ""
         },
         {
           id: "1",
-          img: "Vue.jpg",
+          img: "require(`@/assets/abstract.jpg`)",
           tag: "#Illustration",
+          link: ""
         },
         {
           id: "2",
-          img: "Angular.jpg",
+          img: "require(`@/assets/fingerprint-text.png`)",
           tag: "#Photoshop",
+          link: ""
         },
         {
           id: "3",
-          img: "Java.jpg",
-          tag: "Tim Buchikka",
+          img: "require(`@/assets/pattern-2.png`)",
+          tag: "#Pattern",
+          link: ""
         },
         {
           id: "4",
-          img: "web Dev.jpg",
-          tag: "Colt Stele",
+          img: "require(`@/assets/pattern-japan.png`)",
+          tag: "#Typograph",
+          link: ""
         },
       ],
     };
@@ -63,12 +68,12 @@ export default {
           <div
             class="bg-gray-900 shadow-lg rounded p-3"
             v-for="work in works"
-            :key="work.id"
+            :key="work"
           >
             <div class="group relative">
               <img
-                class="w-full md:w-72 block rounded"
                 src="{{work.img}}"
+                class="w-full md:w-72 block rounded"
                 alt=""
               />
               <div
@@ -164,7 +169,7 @@ export default {
               </div>
             </div>
             <div class="p-5">
-              <h3 class="text-white text-lg">Epoch</h3>
+              <h3 class="text-white text-lg">{{work.tag}}</h3>
               <p class="text-gray-400">Tycho</p>
             </div>
           </div>
