@@ -68,11 +68,11 @@ export default {
           <div
             class="bg-gray-900 shadow-lg rounded p-3"
             v-for="work in works"
-            :key="work"
+            :key="work.id"
           >
             <div class="group relative">
               <img
-                src="{{work.img}}"
+                :src="works.img"
                 class="w-full md:w-72 block rounded"
                 alt=""
               />
