@@ -5,7 +5,7 @@ export default {
       works: [
         {
           Id: "0",
-          Image: "../assets/cawang-01.jpg",
+          Image: "src=require(../assets/cawang-01.jpg)",
           Tag: "#Logo",
         },
         {
