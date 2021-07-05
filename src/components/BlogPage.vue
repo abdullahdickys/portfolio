@@ -4,29 +4,29 @@ export default {
     return {
       works: [
         {
-          Id: "0",
-          Image: "src=require(../assets/cawang-01.jpg)",
-          Tag: "#Logo",
+          id: "0",
+          img: "require('../assets/cawang-01.jpg')",
+          tag: "#Logo",
         },
         {
-          Id: "1",
-          Image: "Vue.jpg",
-          Tag: "#Illustration",
+          id: "1",
+          img: "Vue.jpg",
+          tag: "#Illustration",
         },
         {
-          Id: "2",
-          Image: "Angular.jpg",
-          Tag: "#Photoshop",
+          id: "2",
+          img: "Angular.jpg",
+          tag: "#Photoshop",
         },
         {
-          Id: "3",
-          Image: "Java.jpg",
-          Tag: "Tim Buchikka",
+          id: "3",
+          img: "Java.jpg",
+          tag: "Tim Buchikka",
         },
         {
-          Id: "4",
-          Image: "web Dev.jpg",
-          Tag: "Colt Stele",
+          id: "4",
+          img: "web Dev.jpg",
+          tag: "Colt Stele",
         },
       ],
     };
@@ -63,12 +63,12 @@ export default {
           <div
             class="bg-gray-900 shadow-lg rounded p-3"
             v-for="work in works"
-            :key="work.Id"
+            :key="work.id"
           >
             <div class="group relative">
               <img
                 class="w-full md:w-72 block rounded"
-                src="{{work.Image}}"
+                src="{{work.img}}"
                 alt=""
               />
               <div
