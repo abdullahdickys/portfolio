@@ -16,7 +16,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@headlessui/vue": "^1.2.0",
-    "@heroicons/vue": "^1.0.1",
+    "@heroicons/vue": "^2.0.7",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
